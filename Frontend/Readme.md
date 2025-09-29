@@ -1,1 +1,1 @@
-Front-end for the lung disease classification mobile application.
+-> Front-end for the lung disease classification mobile application.
