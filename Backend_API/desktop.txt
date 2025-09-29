@@ -1,0 +1,3 @@
+[LocalizedFileNames]
+mlp_model.keras=@mlp_model.keras,0
+random_forest_model.pkl=@random_forest_model.pkl,0
