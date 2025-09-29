@@ -1,4 +1,6 @@
 import os
+os.environ["NUMBA_CACHE_DIR"] = "/tmp/numba_cache"  # safe writable location
+os.environ["NUMBA_DISABLE_CACHING"] = "1"
 import librosa
 import numpy as np
 import pandas as pd
@@ -197,7 +199,11 @@ def predict_single_file(file_path):
     model= joblib.load("lung_vs_nonlung.pkl")
     scaler_one= joblib.load("lung_vs_nonlung_scaler.pkl")
     # Extract features
+    print(f"🔎 Checking file: {file_path}")
+    print(f"📏 File size: {os.path.getsize(file_path)} bytes")
+
     features = extract_features(file_path)
+    print(f"✅ Extracted features shape: {features.shape if features is not None else 'None'}")
     if features is None:
         return "Could not process the audio file."
 
@@ -214,4 +220,3 @@ def predict_single_file(file_path):
         return 1
     else:
         return 0
-
