@@ -7,4 +7,4 @@ sdk: docker
 pinned: false
 ---
 
--> Contains all the backend files that are used.
+-> Contains all the backend files (except trained model files).
