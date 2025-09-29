@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify
+
 from pp import extract_all_features, predict_audio
 import os
 import traceback
+import sys
+sys.stdout.reconfigure(line_buffering=True)
+
 app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
-def index():
-    return "Lung Disease Classifier API is running", 200
+def home():
+    return {"status": "API is running. Use POST /extract to send audio."}
 
 @app.route('/extract', methods=['POST'])
 def extract():
@@ -21,9 +25,13 @@ def extract():
 
     try:
         # Save audio
-        audio_path = os.path.join("uploads", "input.wav")
+        # Save audio
+        os.makedirs("/tmp", exist_ok=True)   # <-- create folder if not exists
+        audio_path = os.path.join("/tmp", "input.wav")
         file.save(audio_path)
         print(f"✅ Audio file saved at: {audio_path}")
+
+
 
         # Get prediction
         feature_result = predict_audio(audio_path)
@@ -49,7 +57,13 @@ def extract():
 
 
 # ✅ Start server
+#if __name__ == "__main__":
+#    port = int(os.environ.get("PORT", 10000))
+#    print(f"✅ Flask app running on port {port}")
+#    app.run(host="0.0.0.0", port=port)
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
+    import os
+    port = int(os.environ.get("PORT", 7860))  # Hugging Face requires 7860
     print(f"✅ Flask app running on port {port}")
     app.run(host="0.0.0.0", port=port)
