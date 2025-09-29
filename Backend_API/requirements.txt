@@ -1,5 +1,11 @@
 flask
 librosa
+numba
 numpy
+pandas
 scipy
 nolds
+scikit-learn
+tensorflow-cpu
+keras
+joblib
