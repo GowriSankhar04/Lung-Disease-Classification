@@ -1,6 +1,5 @@
 ---  
-Title: Lung Disease  
-Emoji: 📈  
+Title: Lung Disease Classification  
 colorFrom: purple  
 colorTo: indigo  
 SDK: docker  
