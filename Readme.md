@@ -14,7 +14,8 @@ Built an ensemble model (MLP + Random Forest)
 
 Deployed models on Hugging Face for real-time inference
 
-Developed a Kotlin Android App with backend integration
+Developed a Kotlin Android App with backend integration  
+Deployed in play store (currently in review for production)
 
 Focus on educational and research applications
 
