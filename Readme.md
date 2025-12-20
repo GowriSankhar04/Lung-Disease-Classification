@@ -26,7 +26,7 @@ High classification accuracy across multiple lung disease categories
 
 Real-time prediction and feature extraction
 
-Android app in Closed Testing on Google Play Store
+Android app availabe on Google Play Store
 
 🚀 How to Run  
 pip install -r requirements.txt  
