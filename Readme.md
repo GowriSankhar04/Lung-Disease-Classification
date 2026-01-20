@@ -28,6 +28,8 @@ Real-time prediction and feature extraction
 
 Android app availabe on Google Play Store
 
+Link: https://play.google.com/store/apps/details?id=com.gs.safebreath
+
 🚀 How to Run  
 pip install -r requirements.txt  
 python predict.py --audio sample_lung.wav
