@@ -157,7 +157,7 @@ SafeBreath was built specifically for educational purposes, research application
 
 ## License
 
-*(Add your preferred license here — e.g., MIT, Apache 2.0 — and note the license/attribution terms of the underlying respiratory sound dataset(s) used.)*
+* MIT
 
 ---
 
