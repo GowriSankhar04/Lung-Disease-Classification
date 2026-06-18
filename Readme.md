@@ -137,11 +137,6 @@ A production-ready Android app was built in **Kotlin**.
 - Android application development
 - Google Play Store release
 
-**🚧 In Progress**
-- Performance optimization
-- Research documentation
-- Additional disease category expansion
-
 ## Real-World Applications
 
 - Respiratory health awareness
